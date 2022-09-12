@@ -8,9 +8,9 @@ username1 = 'username'
 password_user = 'password'
 
 userInput = input("What is your username?\n")
-if userInput == username:
+if userInput == username1:
     a=input("Password?\n")
-    if password == 'password_user':
+    if a == 'password_user':
         print("Correct password, Welcome "+Name+"")
      #activity area
 activity_user = input("\nWhat would you like to do:\nGames\nCalculator\nGoogle\nSettings\nYoutube:\n")
