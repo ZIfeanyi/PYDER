@@ -1,1 +1,22 @@
-Name=input("Enter your Name")
+import sys
+from ConfigParser import *
+
+c = ConfigParser()
+
+c.add_section("bob")
+c.set("bob", "colour_scheme", "blue")
+c.set("bob", "british", str(True))
+
+c.add_section("joe")
+c.set("joe", "color_scheme", "that's 'color', silly!")
+c.set("joe", "british", str(False))
+
+c.write(sys.stdout)  # this outputs the configuration to stdout
+                     # you could put a file-handle here instead
+
+for section in c.sections(): # this is how you read the options back in
+    print section
+    for option in c.options(section):
+            print "\t", option, "=", c.get(section, option)
+
+print c.get("bob", "british") # To access the "british" attribute for bob directly
