@@ -182,8 +182,7 @@ wn.mainloop()
       
 
 if activity_user == 'Calculator':
-	# pip install tkinter
-import tkinter as tk
+    import tkinter as tk
 import tkinter.messagebox
 from tkinter.constants import SUNKEN
 
@@ -275,4 +274,3 @@ if activity_user == 'Google':
 
 if activity_user == 'Youtube':
   print("Search Here")
-
